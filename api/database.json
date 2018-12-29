@@ -1,21 +1,37 @@
 {
   "legos": [
     {
+      "creatorName": "",
+      "legoName": "",
+      "legoColor": "1",
+      "legoShape": "",
       "id": 1
+    }
+  ],
+  "colors": [
+    {
+      "id": 1,
+      "color": "Red"
     },
     {
-      "creatorName": "skdgpwme",
-      "legoName": "sdgopweg",
-      "legoColor": "omroebm",
-      "legoShape": "emfbwmev",
-      "id": 2
+      "id": 2,
+      "color": "Green"
     },
     {
-      "creatorName": "skdgpwme",
-      "legoName": "sdgopweg",
-      "legoColor": "omroebm",
-      "legoShape": "emfbwmev",
-      "id": 3
+      "id": 3,
+      "color": "Yellow"
+    },
+    {
+      "id": 4,
+      "color": "Blue"
+    },
+    {
+      "id": 5,
+      "color": "Orange"
+    },
+    {
+      "id": 6,
+      "color": "Black"
     }
   ]
 }
