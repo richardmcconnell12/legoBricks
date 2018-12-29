@@ -1,6 +1,14 @@
 const domBuilder = {
-    appendInputForm () {
-        let inputForm = `
+    appendInputForm() {
+        let selectOptions = "";
+        data.getColors()
+            .then(parsedColors => {
+                parsedColors.forEach(color => {
+                    selectOptions += `<option value="${color.name}">${color.id}</option>`
+                    return selectOptions;
+                })
+
+                let inputForm = `
         <article>
             <fieldset>
             <label for="lego__creator">Creator:</label>
@@ -16,13 +24,17 @@ const domBuilder = {
             </fieldset>
             <fieldset>
             <label for="lego__color">Color:</label>
-            <input id="lego__color" name="lego__color" type="text" autofocus />
+            <select id="lego__color">${selectOptions}</select>
             </fieldset>
             <button class="btn lego__save">Save Lego Creation</button>
         </article>
         `
 
-        let displayContainer = document.querySelector("#display-container");
-        displayContainer.innerHTML = inputForm;
+            let displayContainer = document.querySelector("#display-container");
+            displayContainer.innerHTML = inputForm;
+            let legoSaveButton = document.getElementById("lego__save");
+            console.log(legoSaveButton)
+            legoSaveButton.addEventListener("click", eventListeners.handleFormSubmission);
+        })
     }
-}
+};

@@ -1,21 +1,18 @@
 const eventListeners = {
-    handleFormSubmission () {
+    handleFormSubmission() {
         //Get input values from form
-        const creator = document.querySelector("#lego__creator").value;
-        const name = document.querySelector("#lego__name").value;
-        const color = document.querySelector("#lego__color").value;
-        const shape = document.querySelector("#lego__shape").value;
-        
-        //Create an object to represent a lego
-        const legoToSave = {
-        creatorName: creator,
-        legoName: name,
-        legoColor: color,
-        legoShape: shape
-       }
-    //    console.log("lego to save", legoToSave);
+        const creator = document.getElementById("lego__creator").value;
+        const name = document.getElementById("lego__name").value;
+        const shape = document.getElementById("lego__shape").value;
+        const color = document.getElementById("lego__color").value;
 
-    // Post to API and pass legoToSave 
-      data.postLego(legoToSave);
-    }
-};
+        //Create an object to represent a lego
+        const legoObject = {
+            creatorName: creator,
+            legoName: name,
+            legoShape: shape,
+            legoColor: color
+        }
+        data.postLego(legoObject);
+    },
+}
