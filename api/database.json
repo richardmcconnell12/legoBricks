@@ -1,10 +1,10 @@
 {
   "legos": [
     {
-      "creatorName": "",
-      "legoName": "",
-      "legoColor": "1",
-      "legoShape": "",
+      "creatorName": "Ricky",
+      "legoName": "Square",
+      "legoShape": "Block",
+      "legoColor": "Yellow",
       "id": 1
     }
   ],
