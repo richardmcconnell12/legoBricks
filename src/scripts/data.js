@@ -8,7 +8,7 @@ const data = {
             body: JSON.stringify(legoToSave)
         })
     },
-    
+
     getColors() {
         return fetch("http://localhost:8088/colors")
             .then(response => response.json())
